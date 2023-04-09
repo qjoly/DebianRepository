@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-set -x
+#set -x
 cd /data
 
 # function that will build .deb files in specific folder

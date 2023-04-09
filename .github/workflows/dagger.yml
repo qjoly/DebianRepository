@@ -1,0 +1,39 @@
+name: Dagger Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Python 3
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.10.10"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install dagger-io
+
+      - name: Login to Dockerhub registry
+        uses: docker/login-action@v2
+        with:
+          username: qjoly
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v2
+        with:
+          image: tonistiigi/binfmt:latest
+          platforms: arm64,arm
+
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run Dagger
+        run: |
+          python .ci/run_dagger.py

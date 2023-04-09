@@ -25,12 +25,6 @@ jobs:
           username: qjoly
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v2
-        with:
-          image: tonistiigi/binfmt:latest
-          platforms: arm64,arm
-
       - name: Checkout code
         uses: actions/checkout@v2
 

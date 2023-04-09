@@ -1,0 +1,5 @@
+Package: kompose
+Version: 1.28.0
+Maintainer: Quentin JOLY <github@thoughtless.eu>
+Architecture: amd64
+Description: Kompose is a conversion tool for Docker Compose to container orchestrators such as Kubernetes (or OpenShift). 

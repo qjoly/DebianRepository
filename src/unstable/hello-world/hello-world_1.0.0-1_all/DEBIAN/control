@@ -1,0 +1,6 @@
+Package: hello-world
+Version: 1.0.0
+Maintainer: Quentin JOLY <github@thoughtless.eu>
+Architecture: all
+Description: Simple hello-world script
+

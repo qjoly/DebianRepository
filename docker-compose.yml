@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  aptly:
+    build:
+        context: .
+        dockerfile: Dockerfile
+    image: qjoly/aptly
+    container_name: aptly
+    ports:
+      - 8080:80
+    volumes:
+      - ./:/data
+    environment:
+      - WEB_URL="http://thebidouilleur:8080"
+

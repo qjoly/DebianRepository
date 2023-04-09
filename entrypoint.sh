@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 #set -x
+
 cd /data
 
 # function that will build .deb files in specific folder
@@ -52,6 +53,15 @@ if [ ! -d "repo-list" ]; then
 fi
 
 root_dir=$(pwd)
+
+if [ ! -d "repo-list" ]; then
+    echo "No repo-list folder, unarchive data.tar.gz to create the structure"
+    cd /data
+    tar xvfz /data.tar.gz  
+    ls -lah /data
+    cd $root_dir
+fi
+
 repos=$(ls repo-list)
 
 rm -rf ~/.aptly/

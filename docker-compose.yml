@@ -9,7 +9,7 @@ services:
     ports:
       - 8080:80
     volumes:
-      - ./:/data
+      - ./volume:/data
     environment:
       - WEB_URL="http://thebidouilleur:8080"
 

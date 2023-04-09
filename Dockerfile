@@ -10,4 +10,5 @@ WORKDIR /data
 COPY ./src ./src
 COPY ./repo-list ./repo-list
 COPY ./html ./html
+RUN tar cvfz /data.tar.gz . >> /dev/null
 CMD [ "/entrypoint.sh" ]

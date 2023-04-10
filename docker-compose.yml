@@ -1,9 +1,9 @@
 version: '3.8'
 services:
   aptly:
-    build:
-        context: .
-        dockerfile: Dockerfile
+#    build:
+#        context: .
+#        dockerfile: Dockerfile
     image: qjoly/aptly
     container_name: aptly
     ports:

@@ -24,7 +24,7 @@ Ainsi, si je veux créer le programme `hello-world` à la version 1.0.0, pour n'
 
 Il est également possible d'importer des `.deb` en plaçant ceux-ci dans le dossier `repo-list` *(suivi du dépôt dans lequel ils seront placés comme `stable` ou `unstable`).* 
 
-Vous pouvez indiquer un dossier vide comme volume : le programme va créer seul la structure en ajoutant 2 programmes de test : `hello-world` et `goodbye-world`.
+Il n'est pas requis que la structure du programme soit déjà créée dans votre volume, vous pouvez très bien utiliser un dossier vide comme volume : le programme va créer seul la structure en ajoutant 2 programmes de test : `hello-world` et `goodbye-world`.
 
 <a href="https://asciinema.org/a/N9JL3ih6jwoLJX4r58Y51NHlf" target="_blank"><img src="https://asciinema.org/a/N9JL3ih6jwoLJX4r58Y51NHlf.svg" /></a>
 

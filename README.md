@@ -13,4 +13,9 @@ Ce projet permet de créer facilement un dépôt Debian sous forme d'image Docke
 
 La page d'accueil du dépôt vient du projet [dev-landing-page](https://github.com/flexdinesh/dev-landing-page).
 
-:warning: Un volume est nécéssaire pour ne pas perdre la clé GPG et les paquets ajoutés.
+
+## Getting Started
+
+Ce projet va créer des fichiers `.deb` à partir du dossier `src`. Celui-ci va gérer plusieurs dépôts (`stable` et `unstable` par défaut), les sources du dépôt `stable` se trouvent dans le dossier `src/stable`.
+
+Ainsi, si je veux créer le programme `hello-world` à la version 1.0.0, pour n'importe quelle architecture et ce programme est la révision 1 dans le dépôt `stable`, alors je vais créer le dossier `src/stable/hello-world/hello-world_1.0.0-1_all` et une fois packagé dans un `.deb`, il sera à cet emplacement `repo-list/stable/hello-world_1.0.0-1_all.deb`

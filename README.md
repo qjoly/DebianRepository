@@ -31,7 +31,7 @@ Vous pouvez indiquer un dossier vide comme volume : le programme va créer seul 
 La page web index.html affiche les instructions pour ajouter le dépôt à votre système. L'URL du dépôt est recupérée depuis la variable d'environnement `WEB_URL`
 
 Exemple: 
-![](./web-pages.png)
+![Landing Page](https://github.com/QJoly/DebianRepository/blob/main/.github/web-pages.png?raw=true)
 
 Pour personnaliser les liens de la page d'accueil, il suffit de modifier le fichier `html/index.html`.
 

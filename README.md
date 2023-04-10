@@ -26,7 +26,7 @@ Il est également possible d'importer des `.deb` en plaçant ceux-ci dans le dos
 
 Vous pouvez indiquer un dossier vide comme volume : le programme va créer seul la structure en ajoutant 2 programmes de test : `hello-world` et `goodbye-world`.
 
-<a href="https://asciinema.org/a/N9JL3ih6jwoLJX4r58Y51NHlf" target="_blank"><img src="https://asciinema.org/a/N9JL3ih6jwoLJX4r58Y51NHlf.svg" /></a>
+<script async id="asciicast-N9JL3ih6jwoLJX4r58Y51NHlf" src="https://asciinema.org/a/N9JL3ih6jwoLJX4r58Y51NHlf.js"></script>
 
 La page web index.html affiche les instructions pour ajouter le dépôt à votre système. L'URL du dépôt est recupérée depuis la variable d'environnement `WEB_URL`
 

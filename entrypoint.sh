@@ -35,7 +35,7 @@ function run_nginx {
 
     if [ -z "$REPO_NAME" ]; then
         echo "REPO_NAME is not defined, using default value"
-        REPO_NAME="DarkBidouDu13"
+        REPO_NAME="TheBidouilleur"
     fi
     
     code_text=$(echo -e "wget -O - -q $WEB_URL/gpg | gpg --dearmor | sudo tee -a /etc/apt/trusted.gpg.d/$REPO_NAME.gpg >/dev/null<br>#Create a file /etc/apt/sources.list.d/$REPO_NAME.list with the following content<br>")

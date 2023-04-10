@@ -33,6 +33,8 @@ La page web index.html affiche les instructions pour ajouter le dépôt à votre
 Exemple: 
 ![Landing Page](https://github.com/QJoly/DebianRepository/blob/main/.github/web-pages.png?raw=true)
 
+Vous pouvez changer le nom du dépôt en modifiant la variable d'environnement `REPO_NAME`, "TheBidouilleur" par défaut.
+
 Pour personnaliser les liens de la page d'accueil, il suffit de modifier le fichier `html/index.html`.
 
 ## Ajouter le dépôt

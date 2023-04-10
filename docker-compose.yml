@@ -11,5 +11,6 @@ services:
     volumes:
       - ./volume:/data
     environment:
-      - WEB_URL="http://thebidouilleur:8080"
+      - WEB_URL=http://localhost:8080
+      - REPO_NAME=TheBidouilleur
 

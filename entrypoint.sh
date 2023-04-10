@@ -29,18 +29,25 @@ function run_nginx {
     list_repo=$(aptly repo list -raw)
 
     if [ -z "$WEB_URL" ]; then
+        echo "WEB_URL is not defined, using default value"
         WEB_URL="http://URL_OF_THIS_SITE"
     fi
 
-    code_text=$(echo -e "wget -O - -q $WEB_URL/gpg | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/thebidouilleur.gpg<br>")
+    if [ -z "$REPO_NAME" ]; then
+        echo "REPO_NAME is not defined, using default value"
+        REPO_NAME="DarkBidouDu13"
+    fi
+    
+    code_text=$(echo -e "wget -O - -q $WEB_URL/gpg | gpg --dearmor | sudo tee -a /etc/apt/trusted.gpg.d/$REPO_NAME.gpg >/dev/null<br>#Create a file /etc/apt/sources.list.d/$REPO_NAME.list with the following content<br>")
 
     for repo in $(aptly repo list -raw); do
-        code_text=$(echo -e "$code_text<br>deb $WEB_URL $repo main")
+        code_text=$(echo -e "${code_text}deb $WEB_URL $repo main<br>")
     done
 
     cp -r /data/html/* /var/www/html/ 
 
     sed -i -z "s;CODE_HERE;${code_text};" /var/www/html/index.html
+    sed -i "s/REPO_NAME/${REPO_NAME}/g" /var/www/html/index.html
 
     service nginx start
     tail -f /var/log/nginx/access.log

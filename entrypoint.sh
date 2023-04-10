@@ -39,7 +39,6 @@ function run_nginx {
     done
 
     cp -r /data/html/* /var/www/html/ 
-    echo -e "$code_text"
 
     sed -i -z "s;CODE_HERE;${code_text};" /var/www/html/index.html
 
@@ -57,8 +56,7 @@ root_dir=$(pwd)
 if [ ! -d "repo-list" ]; then
     echo "No repo-list folder, unarchive data.tar.gz to create the structure"
     cd /data
-    tar xvfz /data.tar.gz  
-    ls -lah /data
+    tar xfz /data.tar.gz 
     cd $root_dir
 fi
 

@@ -5,7 +5,8 @@ RUN apt update \
 RUN cd /tmp \
       && wget -q -O - https://github.com/aptly-dev/aptly/releases/download/v1.5.0/aptly_1.5.0_linux_amd64.tar.gz | tar xvzf - \
       && mv aptly_1.5.0_linux_amd64/aptly /usr/bin/aptly \
-      && aptly version
+      && aptly version \
+      && rm -rf /tmp/aptly_1.5.0_linux_amd64
 COPY ./entrypoint.sh /entrypoint.sh
 WORKDIR /data
 COPY ./src ./src

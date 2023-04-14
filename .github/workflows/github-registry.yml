@@ -23,4 +23,4 @@ jobs:
        with:
          context: .
          push: true
-         tags: ghcr.io/qjoly/simple-debian-repository
+         tags: ghcr.io/qjoly/simpledebianrepository

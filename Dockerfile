@@ -1,4 +1,4 @@
-FROM debian:bullseye
+FROM debian:bullseye-slim
 RUN apt update \
       && apt install wget nginx gnupg xz-utils gpg bzip2 tree -y \
       && rm -rf /var/lib/apt/lists/*

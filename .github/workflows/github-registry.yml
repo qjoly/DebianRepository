@@ -9,7 +9,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-     - uses: actions/checkout@v3
+     - uses: actions/checkout@v4
         
      - name: Log in to the Container registry
        uses: docker/login-action@5f4866a30a54f16a52d2ecb4a3898e9e424939cf
